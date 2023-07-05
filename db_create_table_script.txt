@@ -1,0 +1,15 @@
+-- Table: public.user_revenue
+
+-- DROP TABLE IF EXISTS public.user_revenue;
+
+CREATE TABLE IF NOT EXISTS public.user_revenue
+(
+    user_id text COLLATE pg_catalog."default" NOT NULL,
+    revenue numeric,
+    CONSTRAINT uc_user_id UNIQUE (user_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.user_revenue
+    OWNER to postgres;
